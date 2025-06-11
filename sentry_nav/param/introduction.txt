@@ -1,0 +1,7 @@
+  global_frame_id: robot_foot_init
+  #对传感器的坐标系和数据进行配置。这个也会用于代价地图添加和清除障碍物。例如，你可以用激光雷达传感器用于在代价地图添加障碍物，再添加kinect用于导航和清除障碍物。
+#sensor_frame should be your own frame in tftree
+scan: {sensor_frame: body_2d, data_type: LaserScan, topic: /scan, marking: true, clearing: true}
+  global_frame: robot_foot_init #里程计坐标系
+  # global_frame: camera_init #里程计坐标系
+  robot_base_frame: body_foot #机器人坐标系
